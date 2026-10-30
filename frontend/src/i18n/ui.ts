@@ -1,0 +1,16 @@
+export const ui = {
+  skip: 'Lewati ke konten', menu: 'Menu navigasi', open: 'Buka menu', close: 'Tutup',
+  home: 'Beranda', projects: 'Proyek', articles: 'Artikel', read: 'Baca selengkapnya',
+  caseStudy: 'Lihat studi kasus', demo: 'Kunjungi situs', repository: 'Lihat kode',
+  problem: 'Masalah', solution: 'Solusi', result: 'Hasil', stack: 'Teknologi',
+  min: 'menit baca', previous: 'Sebelumnya', next: 'Berikutnya',
+  empty: 'Belum ada konten yang dipublikasikan.', unavailable: 'Situs sedang diperbarui. Silakan coba lagi sebentar.',
+  notFoundTitle: 'Halaman tidak ditemukan', notFound: 'Alamat ini mungkin telah berubah. Kembali ke beranda untuk melanjutkan.',
+  back: 'Kembali ke beranda', intro: 'Tonton perkenalan',
+  website: 'Website', name: 'Nama', contact: 'Email / WhatsApp', projectType: 'Jenis proyek', budget: 'Kisaran anggaran',
+  message: 'Ceritakan kebutuhan Anda', submit: 'Kirim pesan', choose: 'Pilih salah satu',
+  sending: 'Mengirim…', error: 'Pesan belum terkirim. Silakan coba lagi.', verify: 'Selesaikan verifikasi terlebih dahulu.',
+  send: 'Kirim', wait: 'Menunggu jawaban…', preview: 'Pratinjau draf — tautan berlaku 10 menit.',
+  whatsapp: 'WhatsApp', discussion: 'Diskusi', faq: 'Pertanyaan umum', top: 'Kembali ke atas',
+  statuses: { live: 'Live', in_development: 'Dalam Pengembangan', in_planning: 'Dalam Perencanaan', mvp: 'MVP', academic: 'Akademik', archived: 'Arsip' } as Record<string, string>,
+};

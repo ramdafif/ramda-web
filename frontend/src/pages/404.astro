@@ -1,0 +1,8 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { cms, type Home } from '../lib/cms';
+import { ui } from '../i18n/ui';
+const home = await cms<Home>('home');
+Astro.response.status = 404;
+---
+<Layout home={home} title={ui.notFoundTitle}><section class="container not-found"><p class="eyebrow">404</p><h1>{ui.notFoundTitle}</h1><p>{ui.notFound}</p><a class="button" href="/">{ui.back}</a></section></Layout>

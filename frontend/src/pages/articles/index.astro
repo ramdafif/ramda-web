@@ -1,0 +1,14 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Media from '../../components/Media.astro';
+import { cms, text, type Home, type RecordData } from '../../lib/cms';
+import { breadcrumbs } from '../../lib/seo';
+import { ui } from '../../i18n/ui';
+const page = Math.max(1, Number(Astro.url.searchParams.get('page')) || 1);
+const preview = Astro.url.searchParams.get('preview') || '';
+const home = await cms<Home>('home',preview);
+const articles = await cms<{items:RecordData[];total:number}>(`articles?page=${page}`,preview);
+const section = home.sections.find(s=>s.key==='articles');
+const origin = process.env.SITE_URL || Astro.url.origin;
+---
+<Layout home={home} title={ui.articles} preview={!!preview} jsonld={[breadcrumbs([{name:ui.home,path:'/'},{name:ui.articles,path:'/articles'}],origin)]}><div class="container page-intro"><nav class="breadcrumbs" aria-label={ui.menu}><a href="/">{ui.home}</a><span>/</span><span>{ui.articles}</span></nav><p class="eyebrow">{text(section?.eyebrow)}</p><h1>{text(section?.title)||ui.articles}</h1>{text(section?.subtitle)&&<p>{text(section?.subtitle)}</p>}</div><div class="container page-content">{articles.items.length ? <div class="articles-grid">{articles.items.map(article=><article class="article-card"><Media image={article.cover}/><span class="eyebrow">{text(article.category)}</span><h2><a href={`/articles/${article.slug}`}>{text(article.title)}</a></h2><p>{text(article.excerpt)}</p><p>{article.reading_time} {ui.min}</p></article>)}</div> : <p>{ui.empty}</p>}<nav class="pagination" aria-label={ui.articles}>{page>1&&<a href={`?page=${page-1}`}>{ui.previous}</a>}{articles.total>page*12&&<a href={`?page=${page+1}`}>{ui.next}</a>}</nav></div></Layout>

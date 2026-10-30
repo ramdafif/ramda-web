@@ -1,0 +1,4 @@
+# Copy to /etc/nginx/snippets/ramda-brotli.conf only after loading a compatible nginx Brotli module.
+brotli on;
+brotli_comp_level 5;
+brotli_types text/html text/plain text/css application/javascript application/json image/svg+xml application/xml application/rss+xml;

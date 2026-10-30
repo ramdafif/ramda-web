@@ -1,0 +1,13 @@
+---
+import { text, type CmsImage } from '../lib/cms';
+interface Props { image?: CmsImage; eager?: boolean; class?: string; }
+const { image, eager = false, class: className = '' } = Astro.props;
+const formats = ['avif', 'webp'];
+---
+{image?.src && <picture class={className}>
+  {formats.map(format => {
+    const variants = image.variants?.filter(v => v.format === format) || [];
+    return variants.length > 0 && <source type={`image/${format}`} srcset={variants.map(v => `${v.src} ${v.width}w`).join(', ')} sizes="(max-width: 640px) 92vw, (max-width: 1000px) 46vw, 600px"/>;
+  })}
+  <img src={image.src} alt={text(image.alt)} width={image.width} height={image.height} loading={eager ? 'eager' : 'lazy'} fetchpriority={eager ? 'high' : 'auto'} decoding="async"/>
+</picture>}

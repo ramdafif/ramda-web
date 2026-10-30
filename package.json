@@ -1,0 +1,1 @@
+{"name":"ramda-workspace","private":true,"scripts":{"dev":"node --env-file-if-exists=.env deploy/dev.mjs","build":"npm --prefix frontend run build","test":"backend/.venv/bin/python -m pytest backend/tests -q","check":"npm --prefix frontend run check"}}

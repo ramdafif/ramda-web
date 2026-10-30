@@ -1,0 +1,1244 @@
+[
+  {
+    "kind": "settings",
+    "slug": "site",
+    "sort_order": 0,
+    "published": true,
+    "is_placeholder": true,
+    "data": {
+      "brand_name": "RAMDA",
+      "tagline": {
+        "id": "Made for Possibilities.",
+        "en": ""
+      },
+      "logo_dark": {
+        "src": "/brand/ramda-mark.jpg",
+        "alt": {
+          "id": "Monogram R RAMDA",
+          "en": ""
+        },
+        "width": 1536,
+        "height": 1536
+      },
+      "contact_email": "",
+      "whatsapp_number": "",
+      "whatsapp_message": {
+        "id": "Halo Farrel, saya ingin berdiskusi tentang proyek digital.",
+        "en": ""
+      },
+      "availability_on": true,
+      "availability_text": {
+        "id": "Terbuka untuk proyek baru",
+        "en": ""
+      },
+      "footer_text": {
+        "id": "Dibangun dengan pikiran terbuka. Dibuat untuk memberi arti.",
+        "en": ""
+      },
+      "seo_title_template": "%s | RAMDA",
+      "seo_description": {
+        "id": "Farrel Agistha Ramdafif — developer dan AI enthusiast yang membangun website, sistem, dan integrasi AI untuk bisnis.",
+        "en": ""
+      },
+      "navigation": [
+        {
+          "label": {
+            "id": "Proyek",
+            "en": ""
+          },
+          "url": "/#projects"
+        },
+        {
+          "label": {
+            "id": "Layanan",
+            "en": ""
+          },
+          "url": "/#services"
+        },
+        {
+          "label": {
+            "id": "Proses",
+            "en": ""
+          },
+          "url": "/#process"
+        },
+        {
+          "label": {
+            "id": "Tentang",
+            "en": ""
+          },
+          "url": "/#about"
+        }
+      ],
+      "primary_cta": {
+        "label": {
+          "id": "Diskusi Proyek",
+          "en": ""
+        },
+        "url": "/#contact"
+      },
+      "secondary_cta": {
+        "label": {
+          "id": "Lihat Portofolio",
+          "en": ""
+        },
+        "url": "/projects"
+      },
+      "contact_title": {
+        "id": "Punya ide? Mari kita wujudkan.",
+        "en": ""
+      },
+      "contact_description": {
+        "id": "Ceritakan kebutuhan dan tantangan bisnis Anda. Kita mulai dari percakapan yang sederhana.",
+        "en": ""
+      },
+      "contact_success": {
+        "id": "Pesan Anda sudah diterima. Terima kasih, saya akan menghubungi Anda kembali.",
+        "en": ""
+      },
+      "project_types": [
+        {
+          "id": "Website & Landing Page",
+          "en": ""
+        },
+        {
+          "id": "Sistem Bisnis",
+          "en": ""
+        },
+        {
+          "id": "Integrasi AI",
+          "en": ""
+        },
+        {
+          "id": "Konsultasi",
+          "en": ""
+        }
+      ],
+      "budget_ranges": [
+        {
+          "id": "Belum ditentukan",
+          "en": ""
+        },
+        {
+          "id": "Di bawah Rp5 juta",
+          "en": ""
+        },
+        {
+          "id": "Rp5–15 juta",
+          "en": ""
+        },
+        {
+          "id": "Rp15–50 juta",
+          "en": ""
+        },
+        {
+          "id": "Di atas Rp50 juta",
+          "en": ""
+        }
+      ]
+    }
+  },
+  {
+    "kind": "hero",
+    "slug": "main",
+    "sort_order": 0,
+    "published": true,
+    "is_placeholder": true,
+    "data": {
+      "eyebrow": {
+        "id": "Developer · AI Enthusiast · Product Builder",
+        "en": ""
+      },
+      "headline": {
+        "id": "Teknologi yang Memberikan Dampak Nyata.",
+        "en": ""
+      },
+      "highlighted_words": {
+        "id": "Dampak Nyata.",
+        "en": ""
+      },
+      "subheadline": {
+        "id": "Developer dan AI enthusiast yang membangun produk digital untuk membantu UMKM, bisnis, dan perusahaan bekerja lebih efisien melalui web, sistem, dan AI.",
+        "en": ""
+      },
+      "primary_cta": {
+        "label": {
+          "id": "Diskusi Proyek",
+          "en": ""
+        },
+        "url": "/#contact"
+      },
+      "secondary_cta": {
+        "label": {
+          "id": "Lihat Portofolio",
+          "en": ""
+        },
+        "url": "/projects"
+      },
+      "script_tagline": {
+        "id": "Made for Possibilities.",
+        "en": ""
+      }
+    }
+  },
+  {
+    "kind": "section",
+    "slug": "navbar",
+    "sort_order": 0,
+    "published": true,
+    "is_placeholder": true,
+    "data": {
+      "key": "navbar",
+      "enabled": true,
+      "eyebrow": {
+        "id": "",
+        "en": ""
+      },
+      "title": {
+        "id": "",
+        "en": ""
+      },
+      "subtitle": {
+        "id": "",
+        "en": ""
+      }
+    }
+  },
+  {
+    "kind": "section",
+    "slug": "hero",
+    "sort_order": 1,
+    "published": true,
+    "is_placeholder": true,
+    "data": {
+      "key": "hero",
+      "enabled": true,
+      "eyebrow": {
+        "id": "",
+        "en": ""
+      },
+      "title": {
+        "id": "",
+        "en": ""
+      },
+      "subtitle": {
+        "id": "",
+        "en": ""
+      }
+    }
+  },
+  {
+    "kind": "section",
+    "slug": "stats",
+    "sort_order": 2,
+    "published": true,
+    "is_placeholder": true,
+    "data": {
+      "key": "stats",
+      "enabled": true,
+      "eyebrow": {
+        "id": "",
+        "en": ""
+      },
+      "title": {
+        "id": "",
+        "en": ""
+      },
+      "subtitle": {
+        "id": "",
+        "en": ""
+      }
+    }
+  },
+  {
+    "kind": "section",
+    "slug": "projects",
+    "sort_order": 3,
+    "published": true,
+    "is_placeholder": true,
+    "data": {
+      "key": "projects",
+      "enabled": true,
+      "eyebrow": {
+        "id": "01 / KARYA TERPILIH",
+        "en": ""
+      },
+      "title": {
+        "id": "Ide yang menjadi solusi.",
+        "en": ""
+      },
+      "subtitle": {
+        "id": "Produk digital yang dibangun dari kebutuhan nyata, dengan perhatian pada setiap detail.",
+        "en": ""
+      },
+      "cta": {
+        "label": {
+          "id": "Lihat Semua Proyek",
+          "en": ""
+        },
+        "url": "/projects"
+      }
+    }
+  },
+  {
+    "kind": "section",
+    "slug": "ai",
+    "sort_order": 4,
+    "published": true,
+    "is_placeholder": true,
+    "data": {
+      "key": "ai",
+      "enabled": true,
+      "eyebrow": {
+        "id": "02 / RAMDA AI",
+        "en": ""
+      },
+      "title": {
+        "id": "Kenali karya saya. Lewat percakapan.",
+        "en": ""
+      },
+      "subtitle": {
+        "id": "Tanyakan tentang proyek, layanan, dan pendekatan saya bersama asisten AI.",
+        "en": ""
+      }
+    }
+  },
+  {
+    "kind": "section",
+    "slug": "services",
+    "sort_order": 5,
+    "published": true,
+    "is_placeholder": true,
+    "data": {
+      "key": "services",
+      "enabled": true,
+      "eyebrow": {
+        "id": "03 / APA YANG SAYA KERJAKAN",
+        "en": ""
+      },
+      "title": {
+        "id": "Solusi tepat. Dampak berarti.",
+        "en": ""
+      },
+      "subtitle": {
+        "id": "Dari langkah pertama hingga sistem yang tumbuh bersama bisnis Anda.",
+        "en": ""
+      }
+    }
+  },
+  {
+    "kind": "section",
+    "slug": "process",
+    "sort_order": 6,
+    "published": true,
+    "is_placeholder": true,
+    "data": {
+      "key": "process",
+      "enabled": true,
+      "eyebrow": {
+        "id": "04 / CARA KERJA",
+        "en": ""
+      },
+      "title": {
+        "id": "Dari percakapan, jadi kenyataan.",
+        "en": ""
+      },
+      "subtitle": {
+        "id": "Proses yang transparan. Komunikasi yang jelas. Satu tujuan bersama.",
+        "en": ""
+      }
+    }
+  },
+  {
+    "kind": "section",
+    "slug": "about",
+    "sort_order": 7,
+    "published": true,
+    "is_placeholder": true,
+    "data": {
+      "key": "about",
+      "enabled": true,
+      "eyebrow": {
+        "id": "05 / DI BALIK RAMDA",
+        "en": ""
+      },
+      "title": {
+        "id": "Teknologi dengan sentuhan personal.",
+        "en": ""
+      },
+      "subtitle": {
+        "id": "",
+        "en": ""
+      }
+    }
+  },
+  {
+    "kind": "section",
+    "slug": "articles",
+    "sort_order": 8,
+    "published": true,
+    "is_placeholder": true,
+    "data": {
+      "key": "articles",
+      "enabled": true,
+      "eyebrow": {
+        "id": "06 / CATATAN & PERSPEKTIF",
+        "en": ""
+      },
+      "title": {
+        "id": "Berbagi cara berpikir.",
+        "en": ""
+      },
+      "subtitle": {
+        "id": "Catatan tentang membangun produk, teknologi, dan hal-hal yang saya pelajari.",
+        "en": ""
+      },
+      "cta": {
+        "label": {
+          "id": "Semua Artikel",
+          "en": ""
+        },
+        "url": "/articles"
+      }
+    }
+  },
+  {
+    "kind": "section",
+    "slug": "pricing",
+    "sort_order": 9,
+    "published": true,
+    "is_placeholder": true,
+    "data": {
+      "key": "pricing",
+      "enabled": true,
+      "eyebrow": {
+        "id": "07 / INVESTASI",
+        "en": ""
+      },
+      "title": {
+        "id": "Mulai dari kebutuhan Anda.",
+        "en": ""
+      },
+      "subtitle": {
+        "id": "",
+        "en": ""
+      }
+    }
+  },
+  {
+    "kind": "section",
+    "slug": "testimonials",
+    "sort_order": 10,
+    "published": true,
+    "is_placeholder": true,
+    "data": {
+      "key": "testimonials",
+      "enabled": true,
+      "eyebrow": {
+        "id": "08 / PENGALAMAN KLIEN",
+        "en": ""
+      },
+      "title": {
+        "id": "Cerita dari kolaborasi.",
+        "en": ""
+      },
+      "subtitle": {
+        "id": "",
+        "en": ""
+      }
+    }
+  },
+  {
+    "kind": "section",
+    "slug": "faq",
+    "sort_order": 11,
+    "published": true,
+    "is_placeholder": true,
+    "data": {
+      "key": "faq",
+      "enabled": true,
+      "eyebrow": {
+        "id": "09 / PERTANYAAN",
+        "en": ""
+      },
+      "title": {
+        "id": "Sebelum kita mulai.",
+        "en": ""
+      },
+      "subtitle": {
+        "id": "",
+        "en": ""
+      }
+    }
+  },
+  {
+    "kind": "section",
+    "slug": "cta",
+    "sort_order": 12,
+    "published": true,
+    "is_placeholder": true,
+    "data": {
+      "key": "cta",
+      "enabled": true,
+      "eyebrow": {
+        "id": "",
+        "en": ""
+      },
+      "title": {
+        "id": "Mari bangun sesuatu yang berarti.",
+        "en": ""
+      },
+      "subtitle": {
+        "id": "Satu percakapan bisa jadi awal dari solusi berikutnya.",
+        "en": ""
+      }
+    }
+  },
+  {
+    "kind": "section",
+    "slug": "footer",
+    "sort_order": 13,
+    "published": true,
+    "is_placeholder": true,
+    "data": {
+      "key": "footer",
+      "enabled": true,
+      "eyebrow": {
+        "id": "",
+        "en": ""
+      },
+      "title": {
+        "id": "",
+        "en": ""
+      },
+      "subtitle": {
+        "id": "",
+        "en": ""
+      }
+    }
+  },
+  {
+    "kind": "stat",
+    "slug": "1",
+    "sort_order": 0,
+    "published": true,
+    "is_placeholder": true,
+    "data": {
+      "value": "10+",
+      "label": {
+        "id": "Proyek digital",
+        "en": ""
+      },
+      "sublabel": {
+        "id": "Menunggu verifikasi pemilik",
+        "en": ""
+      },
+      "visible": false
+    }
+  },
+  {
+    "kind": "stat",
+    "slug": "2",
+    "sort_order": 1,
+    "published": true,
+    "is_placeholder": true,
+    "data": {
+      "value": "4+",
+      "label": {
+        "id": "Tahun pengalaman",
+        "en": ""
+      },
+      "sublabel": {
+        "id": "Menunggu verifikasi pemilik",
+        "en": ""
+      },
+      "visible": false
+    }
+  },
+  {
+    "kind": "stat",
+    "slug": "3",
+    "sort_order": 2,
+    "published": true,
+    "is_placeholder": true,
+    "data": {
+      "value": "2",
+      "label": {
+        "id": "Produk live",
+        "en": ""
+      },
+      "sublabel": {
+        "id": "Menunggu verifikasi pemilik",
+        "en": ""
+      },
+      "visible": false
+    }
+  },
+  {
+    "kind": "stat",
+    "slug": "4",
+    "sort_order": 3,
+    "published": true,
+    "is_placeholder": true,
+    "data": {
+      "value": "1000+",
+      "label": {
+        "id": "Pengguna",
+        "en": ""
+      },
+      "sublabel": {
+        "id": "Menunggu verifikasi pemilik",
+        "en": ""
+      },
+      "visible": false
+    }
+  },
+  {
+    "kind": "project",
+    "slug": "gajiku",
+    "sort_order": 0,
+    "published": true,
+    "is_placeholder": true,
+    "data": {
+      "title": {
+        "id": "Gajiku",
+        "en": ""
+      },
+      "summary": {
+        "id": "Sistem kasbon karyawan yang menghubungkan kebutuhan karyawan dengan proses perusahaan.",
+        "en": ""
+      },
+      "status": "live",
+      "stack_tags": [
+        "Python",
+        "Flask",
+        "MySQL"
+      ],
+      "featured": true,
+      "problem": {
+        "id": "Akses kasbon karyawan membutuhkan alur yang jelas dan pencatatan yang terpusat.",
+        "en": ""
+      },
+      "solution": {
+        "id": "Aplikasi berbasis web untuk mengelola permohonan kasbon dan proses administrasi perusahaan.",
+        "en": ""
+      },
+      "result": {
+        "id": "Hasil operasional dan metrik akan dilengkapi setelah diverifikasi oleh pemilik.",
+        "en": ""
+      }
+    }
+  },
+  {
+    "kind": "project",
+    "slug": "elrise-hris",
+    "sort_order": 1,
+    "published": true,
+    "is_placeholder": true,
+    "data": {
+      "title": {
+        "id": "Elrise HRIS",
+        "en": ""
+      },
+      "summary": {
+        "id": "Pengelolaan karyawan, kehadiran, dan payroll dalam alur kerja yang terhubung.",
+        "en": ""
+      },
+      "status": "live",
+      "stack_tags": [
+        "Next.js",
+        "TypeScript",
+        "Prisma"
+      ],
+      "featured": true,
+      "problem": {
+        "id": "Data SDM dan operasional perlu dikelola secara konsisten antarproject.",
+        "en": ""
+      },
+      "solution": {
+        "id": "HRIS dengan pengelolaan tenant, project, karyawan, kehadiran, dan integrasi Gajiku.",
+        "en": ""
+      },
+      "result": {
+        "id": "Status implementasi dan hasil terukur masih menunggu verifikasi pemilik.",
+        "en": ""
+      }
+    }
+  },
+  {
+    "kind": "project",
+    "slug": "petaumkm",
+    "sort_order": 2,
+    "published": true,
+    "is_placeholder": true,
+    "data": {
+      "title": {
+        "id": "PetaUMKM",
+        "en": ""
+      },
+      "summary": {
+        "id": "Menemukan UMKM sekitar melalui peta, dengan rencana pemesanan dan pembayaran QRIS.",
+        "en": ""
+      },
+      "status": "in_planning",
+      "stack_tags": [
+        "Flask",
+        "Mapbox",
+        "Xendit"
+      ],
+      "featured": true,
+      "problem": {
+        "id": "UMKM lokal membutuhkan cara agar lebih mudah ditemukan calon pembeli.",
+        "en": ""
+      },
+      "solution": {
+        "id": "Konsep marketplace berbasis peta untuk penemuan merchant dan transaksi langsung.",
+        "en": ""
+      },
+      "result": {
+        "id": "Masih dalam perencanaan. Belum ada klaim penggunaan atau hasil bisnis.",
+        "en": ""
+      }
+    }
+  },
+  {
+    "kind": "project",
+    "slug": "siwarga",
+    "sort_order": 3,
+    "published": true,
+    "is_placeholder": true,
+    "data": {
+      "title": {
+        "id": "SiWarga",
+        "en": ""
+      },
+      "summary": {
+        "id": "Pengaduan masyarakat dan koordinasi lingkungan dalam satu sistem yang tertata.",
+        "en": ""
+      },
+      "status": "academic",
+      "stack_tags": [
+        "Python",
+        "Flask",
+        "MySQL"
+      ],
+      "featured": true,
+      "problem": {
+        "id": "Pengaduan warga perlu diterima, divalidasi, dan dipantau dengan lebih terstruktur.",
+        "en": ""
+      },
+      "solution": {
+        "id": "Capstone sistem pengaduan dengan akses berbasis peran untuk RW, RT, Karang Taruna, dan warga.",
+        "en": ""
+      },
+      "result": {
+        "id": "Hasil akademik dan evaluasi akan dilengkapi setelah diverifikasi.",
+        "en": ""
+      }
+    }
+  },
+  {
+    "kind": "service",
+    "slug": "1",
+    "sort_order": 0,
+    "published": true,
+    "is_placeholder": true,
+    "data": {
+      "title": {
+        "id": "Web & Software Development",
+        "en": ""
+      },
+      "description": {
+        "id": "Website dan aplikasi yang nyaman dipakai, cepat, dan sesuai kebutuhan Anda.",
+        "en": ""
+      },
+      "icon": "code",
+      "bullets": [
+        {
+          "id": "Website & landing page",
+          "en": ""
+        },
+        {
+          "id": "Aplikasi web custom",
+          "en": ""
+        },
+        {
+          "id": "Dashboard & admin CMS",
+          "en": ""
+        }
+      ]
+    }
+  },
+  {
+    "kind": "service",
+    "slug": "2",
+    "sort_order": 1,
+    "published": true,
+    "is_placeholder": true,
+    "data": {
+      "title": {
+        "id": "AI Integration",
+        "en": ""
+      },
+      "description": {
+        "id": "Membawa kemampuan AI ke alur kerja yang memang membutuhkannya.",
+        "en": ""
+      },
+      "icon": "sparkles",
+      "bullets": [
+        {
+          "id": "Asisten berbasis pengetahuan",
+          "en": ""
+        },
+        {
+          "id": "Integrasi API model AI",
+          "en": ""
+        },
+        {
+          "id": "Otomatisasi tugas berulang",
+          "en": ""
+        }
+      ]
+    }
+  },
+  {
+    "kind": "service",
+    "slug": "3",
+    "sort_order": 2,
+    "published": true,
+    "is_placeholder": true,
+    "data": {
+      "title": {
+        "id": "System & Business Solution",
+        "en": ""
+      },
+      "description": {
+        "id": "Menerjemahkan proses bisnis menjadi sistem yang lebih tertata.",
+        "en": ""
+      },
+      "icon": "layers",
+      "bullets": [
+        {
+          "id": "Sistem operasional bisnis",
+          "en": ""
+        },
+        {
+          "id": "Integrasi antarplatform",
+          "en": ""
+        },
+        {
+          "id": "Pelaporan & pengelolaan data",
+          "en": ""
+        }
+      ]
+    }
+  },
+  {
+    "kind": "service",
+    "slug": "4",
+    "sort_order": 3,
+    "published": true,
+    "is_placeholder": true,
+    "data": {
+      "title": {
+        "id": "Consultation",
+        "en": ""
+      },
+      "description": {
+        "id": "Mendiskusikan arah dan pilihan teknis sebelum Anda berinvestasi.",
+        "en": ""
+      },
+      "icon": "chat",
+      "bullets": [
+        {
+          "id": "Analisis kebutuhan",
+          "en": ""
+        },
+        {
+          "id": "Perencanaan solusi",
+          "en": ""
+        },
+        {
+          "id": "Review arsitektur sistem",
+          "en": ""
+        }
+      ]
+    }
+  },
+  {
+    "kind": "process",
+    "slug": "1",
+    "sort_order": 0,
+    "published": true,
+    "is_placeholder": true,
+    "data": {
+      "number": "01",
+      "title": {
+        "id": "Diskusi",
+        "en": ""
+      },
+      "description": {
+        "id": "Memahami tujuan, tantangan, dan kebutuhan Anda.",
+        "en": ""
+      }
+    }
+  },
+  {
+    "kind": "process",
+    "slug": "2",
+    "sort_order": 1,
+    "published": true,
+    "is_placeholder": true,
+    "data": {
+      "number": "02",
+      "title": {
+        "id": "Perencanaan",
+        "en": ""
+      },
+      "description": {
+        "id": "Menyepakati ruang lingkup, prioritas, dan arah desain.",
+        "en": ""
+      }
+    }
+  },
+  {
+    "kind": "process",
+    "slug": "3",
+    "sort_order": 2,
+    "published": true,
+    "is_placeholder": true,
+    "data": {
+      "number": "03",
+      "title": {
+        "id": "Pengembangan",
+        "en": ""
+      },
+      "description": {
+        "id": "Membangun bertahap dengan pembaruan progres yang jelas.",
+        "en": ""
+      }
+    }
+  },
+  {
+    "kind": "process",
+    "slug": "4",
+    "sort_order": 3,
+    "published": true,
+    "is_placeholder": true,
+    "data": {
+      "number": "04",
+      "title": {
+        "id": "Review",
+        "en": ""
+      },
+      "description": {
+        "id": "Menguji alur, menyempurnakan detail, dan menerima masukan.",
+        "en": ""
+      }
+    }
+  },
+  {
+    "kind": "process",
+    "slug": "5",
+    "sort_order": 4,
+    "published": true,
+    "is_placeholder": true,
+    "data": {
+      "number": "05",
+      "title": {
+        "id": "Launch",
+        "en": ""
+      },
+      "description": {
+        "id": "Menyiapkan peluncuran dan panduan penggunaan.",
+        "en": ""
+      }
+    }
+  },
+  {
+    "kind": "about",
+    "slug": "farrel",
+    "sort_order": 0,
+    "published": true,
+    "is_placeholder": true,
+    "data": {
+      "name": "Farrel Agistha Ramdafif",
+      "role": {
+        "id": "Developer & AI Enthusiast",
+        "en": ""
+      },
+      "bio": {
+        "id": "Saya percaya teknologi yang baik berawal dari pemahaman terhadap orang yang menggunakannya. Saya membangun website, sistem bisnis, dan integrasi AI dengan fokus pada kegunaan, kejelasan, dan pengalaman yang nyaman.\n\nMelalui ekosistem **Elkyno Technology**, saya terus mengeksplorasi cara menghadirkan solusi digital yang relevan untuk kebutuhan nyata.",
+        "en": ""
+      },
+      "highlight_cards": [
+        {
+          "title": {
+            "id": "Berangkat dari kebutuhan",
+            "en": ""
+          },
+          "description": {
+            "id": "Memahami masalah sebelum menentukan solusi.",
+            "en": ""
+          }
+        },
+        {
+          "title": {
+            "id": "Dibangun dengan perhatian",
+            "en": ""
+          },
+          "description": {
+            "id": "Detail kecil menentukan pengalaman keseluruhan.",
+            "en": ""
+          }
+        }
+      ]
+    }
+  },
+  {
+    "kind": "tech",
+    "slug": "python",
+    "sort_order": 0,
+    "published": true,
+    "is_placeholder": true,
+    "data": {
+      "name": "Python",
+      "category": "development",
+      "show_on_home": true
+    }
+  },
+  {
+    "kind": "tech",
+    "slug": "flask",
+    "sort_order": 1,
+    "published": true,
+    "is_placeholder": true,
+    "data": {
+      "name": "Flask",
+      "category": "development",
+      "show_on_home": true
+    }
+  },
+  {
+    "kind": "tech",
+    "slug": "next.js",
+    "sort_order": 2,
+    "published": true,
+    "is_placeholder": true,
+    "data": {
+      "name": "Next.js",
+      "category": "development",
+      "show_on_home": true
+    }
+  },
+  {
+    "kind": "tech",
+    "slug": "typescript",
+    "sort_order": 3,
+    "published": true,
+    "is_placeholder": true,
+    "data": {
+      "name": "TypeScript",
+      "category": "development",
+      "show_on_home": true
+    }
+  },
+  {
+    "kind": "tech",
+    "slug": "mysql",
+    "sort_order": 4,
+    "published": true,
+    "is_placeholder": true,
+    "data": {
+      "name": "MySQL",
+      "category": "development",
+      "show_on_home": true
+    }
+  },
+  {
+    "kind": "tech",
+    "slug": "prisma",
+    "sort_order": 5,
+    "published": true,
+    "is_placeholder": true,
+    "data": {
+      "name": "Prisma",
+      "category": "development",
+      "show_on_home": true
+    }
+  },
+  {
+    "kind": "tech",
+    "slug": "tailwind-css",
+    "sort_order": 6,
+    "published": true,
+    "is_placeholder": true,
+    "data": {
+      "name": "Tailwind CSS",
+      "category": "development",
+      "show_on_home": true
+    }
+  },
+  {
+    "kind": "tech",
+    "slug": "docker",
+    "sort_order": 7,
+    "published": true,
+    "is_placeholder": true,
+    "data": {
+      "name": "Docker",
+      "category": "development",
+      "show_on_home": true
+    }
+  },
+  {
+    "kind": "article",
+    "slug": "catatan-1",
+    "sort_order": 0,
+    "published": false,
+    "is_placeholder": true,
+    "data": {
+      "title": {
+        "id": "Membangun Sistem dari Kebutuhan Nyata",
+        "en": ""
+      },
+      "excerpt": {
+        "id": "Draf editorial — perlu ditulis dan ditinjau sebelum publikasi.",
+        "en": ""
+      },
+      "body": {
+        "id": "",
+        "en": ""
+      },
+      "status": "draft",
+      "category": {
+        "id": "Catatan",
+        "en": ""
+      }
+    }
+  },
+  {
+    "kind": "article",
+    "slug": "catatan-2",
+    "sort_order": 1,
+    "published": false,
+    "is_placeholder": true,
+    "data": {
+      "title": {
+        "id": "AI untuk Bisnis: Mulai dari Masalahnya",
+        "en": ""
+      },
+      "excerpt": {
+        "id": "Draf editorial — perlu ditulis dan ditinjau sebelum publikasi.",
+        "en": ""
+      },
+      "body": {
+        "id": "",
+        "en": ""
+      },
+      "status": "draft",
+      "category": {
+        "id": "Catatan",
+        "en": ""
+      }
+    }
+  },
+  {
+    "kind": "article",
+    "slug": "catatan-3",
+    "sort_order": 2,
+    "published": false,
+    "is_placeholder": true,
+    "data": {
+      "title": {
+        "id": "Catatan Membangun Produk Digital",
+        "en": ""
+      },
+      "excerpt": {
+        "id": "Draf editorial — perlu ditulis dan ditinjau sebelum publikasi.",
+        "en": ""
+      },
+      "body": {
+        "id": "",
+        "en": ""
+      },
+      "status": "draft",
+      "category": {
+        "id": "Catatan",
+        "en": ""
+      }
+    }
+  },
+  {
+    "kind": "article",
+    "slug": "catatan-4",
+    "sort_order": 3,
+    "published": false,
+    "is_placeholder": true,
+    "data": {
+      "title": {
+        "id": "Memilih Teknologi yang Tepat untuk Proyek",
+        "en": ""
+      },
+      "excerpt": {
+        "id": "Draf editorial — perlu ditulis dan ditinjau sebelum publikasi.",
+        "en": ""
+      },
+      "body": {
+        "id": "",
+        "en": ""
+      },
+      "status": "draft",
+      "category": {
+        "id": "Catatan",
+        "en": ""
+      }
+    }
+  },
+  {
+    "kind": "ai_config",
+    "slug": "assistant",
+    "sort_order": 0,
+    "published": true,
+    "is_placeholder": true,
+    "data": {
+      "enabled": false,
+      "model": "",
+      "system_prompt": "Anda adalah asisten AI situs RAMDA, bukan Farrel. Jawab dalam Bahasa Indonesia berdasarkan konteks terverifikasi. Jika informasi tidak tersedia, katakan tidak tahu dan arahkan pengunjung ke formulir kontak.",
+      "welcome_message": {
+        "id": "Halo! Saya asisten AI RAMDA. Apa yang ingin Anda ketahui?",
+        "en": ""
+      },
+      "suggestions": [
+        {
+          "id": "Apa saja layanan RAMDA?",
+          "en": ""
+        },
+        {
+          "id": "Ceritakan tentang Gajiku",
+          "en": ""
+        },
+        {
+          "id": "Bagaimana proses kerja proyek?",
+          "en": ""
+        }
+      ],
+      "disclaimer": {
+        "id": "Demo AI, jawaban bisa keliru",
+        "en": ""
+      },
+      "offline_message": {
+        "id": "Demo AI sedang tidak tersedia. Anda tetap bisa menghubungi saya melalui formulir di bawah.",
+        "en": ""
+      },
+      "limit_message": {
+        "id": "Batas demo tercapai. Silakan coba lagi nanti atau lanjutkan lewat formulir kontak.",
+        "en": ""
+      },
+      "input_placeholder": {
+        "id": "Tanyakan tentang proyek atau layanan...",
+        "en": ""
+      }
+    }
+  }
+]

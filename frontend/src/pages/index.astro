@@ -1,0 +1,12 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Sections from '../components/Sections.astro';
+import Contact from '../components/Contact.astro';
+import { identity } from '../lib/seo';
+import { cms, type Home } from '../lib/cms';
+import { ui } from '../i18n/ui';
+const preview = Astro.url.searchParams.get('preview') || '';
+let home: Home | undefined;
+try { home = await cms<Home>('home', preview); } catch { Astro.response.status = 503; }
+---
+{home ? <Layout home={home} preview={!!preview} jsonld={identity(home,process.env.SITE_URL || Astro.url.origin)}><div>{home.sections.map(section=><Sections home={home} section={section}/>)}{home.sections.some(s=>s.key==='cta') && <Contact home={home}/>}</div></Layout> : <html lang="id"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>{ui.unavailable}</title></head><body><main><h1>{ui.unavailable}</h1></main></body></html>}

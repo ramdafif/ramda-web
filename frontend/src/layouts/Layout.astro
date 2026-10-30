@@ -1,0 +1,43 @@
+---
+import '../styles/global.css';
+import { text, whatsapp, primaryUrl, type Home, type Localized } from '../lib/cms';
+import { ui } from '../i18n/ui';
+import Icon from '../components/Icon.astro';
+interface Props { home: Home; title?: string; description?: string; image?: string; jsonld?: Record<string, unknown>[]; preview?: boolean; ogType?: 'website'|'article'; }
+const { home, title, description, image, jsonld = [], preview = false, ogType = 'website' } = Astro.props;
+const s = home.settings;
+const pageTitle = title ? (s.seo_title_template || '%s').replace('%s', title) : s.brand_name;
+const origin = process.env.SITE_URL || Astro.url.origin;
+const canonical = new URL(Astro.url.pathname, origin).href;
+const og = image || s.og_image?.src || s.logo_dark?.src;
+const heroImage = Astro.url.pathname==='/' ? home.hero.background_image : undefined;
+const heroAvif = heroImage?.variants?.filter((v: {format:string})=>v.format==='avif');
+const showNav = home.sections.some(x => x.key === 'navbar');
+const showFooter = home.sections.some(x => x.key === 'footer');
+---
+<!doctype html><html lang="id"><head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="theme-color" content="#0a0a0b"/><meta name="color-scheme" content="dark"/>
+  <title>{pageTitle}</title><meta name="description" content={description || text(s.seo_description)}/>
+  <link rel="canonical" href={canonical}/>{s.favicon_url && <link rel="icon" href={s.favicon_url}/>}
+  <meta property="og:title" content={pageTitle}/><meta property="og:description" content={description || text(s.seo_description)}/><meta property="og:type" content={ogType}/><meta property="og:url" content={canonical}/><meta property="og:locale" content="id_ID"/>
+  {og && <meta property="og:image" content={new URL(og, origin).href}/>}
+  {heroImage?.src && <link rel="preload" as="image" href={heroAvif?.length ? heroAvif[heroAvif.length-1].src : heroImage.src} type={heroAvif?.length ? 'image/avif' : undefined} imagesrcset={heroAvif?.map((v:{src:string;width:number})=>`${v.src} ${v.width}w`).join(', ')} imagesizes="(max-width: 640px) 92vw, (max-width: 1000px) 46vw, 600px"/>}
+  <meta name="twitter:card" content={og ? 'summary_large_image' : 'summary'}/><meta name="twitter:title" content={pageTitle}/><meta name="twitter:description" content={description || text(s.seo_description)}/>{og && <meta name="twitter:image" content={new URL(og, origin).href}/>}
+  {preview && <meta name="robots" content="noindex,nofollow"/>}
+  {jsonld.map(data => <script type="application/ld+json" set:html={JSON.stringify(data).replace(/</g, '\\u003c')}/>)}
+  {s.analytics_script_url && <script is:inline defer src={s.analytics_script_url} data-website-id={s.analytics_site_id} data-domain={s.analytics_site_id}></script>}
+</head><body id="top">
+  <a class="skip-link" href="#main">{ui.skip}</a>
+  {preview && <div class="preview-banner">{ui.preview}</div>}
+  {showNav && <header class="site-header"><div class="container nav-wrap"><a href="/" class="wordmark" aria-label={s.brand_name}>{s.logo_dark?.src && <img src={s.logo_dark.src} width="38" height="38" alt=""/>}<span>{s.brand_name}<span class="bronze-dot">.</span></span></a>
+    <nav class="desktop-nav" aria-label={ui.menu}>{s.navigation?.map((link: {label: Localized; url: string}) => <a href={link.url}>{text(link.label)}</a>)}</nav>
+    <div class="nav-actions">{s.availability_on && <span class="availability"><i></i>{text(s.availability_text)}</span>}<a class="button button-small nav-cta" href={primaryUrl(s)} data-track="nav-cta">{text(s.primary_cta?.label)}<Icon size={16}/></a>
+    <details class="mobile-menu"><summary aria-label={ui.open}><span></span><span></span></summary><nav aria-label={ui.menu}>{s.navigation?.map((link: {label: Localized; url: string}) => <a href={link.url}>{text(link.label)}</a>)}<a href={primaryUrl(s)}>{text(s.primary_cta?.label)}</a></nav></details></div>
+  </div></header>}
+  <main id="main"><slot/></main>
+  {showFooter && <footer class="site-footer"><div class="container footer-top"><a class="wordmark" href="/">{s.brand_name}<span class="bronze-dot">.</span></a><p>{text(s.tagline)}</p><div class="social-links">{Object.entries(s.social_links || {}).filter(([,url])=>url).map(([name,url])=><a href={url as string} target="_blank" rel="noopener noreferrer">{name}<Icon size={14}/></a>)}</div></div><div class="container footer-bottom"><span>© {new Date().getFullYear()} {s.brand_name}. {text(s.footer_text)}</span><a href="#top" aria-label={ui.top}><Icon size={18}/></a></div></footer>}
+  <div class="mobile-bottom">{whatsapp(s) && <a href={whatsapp(s)} data-track="mobile-whatsapp">{ui.whatsapp}</a>}<a href="/#contact" data-track="mobile-discussion">{ui.discussion}<Icon size={16}/></a></div>
+  {whatsapp(s) && <a class="floating-whatsapp" href={whatsapp(s)} aria-label={ui.whatsapp} data-track="floating-whatsapp"><Icon name="chat" size={22}/></a>}
+  <script>import '../scripts/site';</script>
+</body></html>

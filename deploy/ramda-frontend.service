@@ -1,0 +1,24 @@
+[Unit]
+Description=RAMDA Astro SSR
+After=network.target ramda-backend.service
+[Service]
+User=ramda
+Group=www-data
+WorkingDirectory=/srv/ramda/frontend
+EnvironmentFile=/srv/ramda/.env
+Environment=HOST=127.0.0.1
+Environment=PORT=4321
+Environment=NODE_ENV=production
+Environment=NO_PROXY=localhost,127.0.0.1
+ExecStart=/usr/bin/node dist/server/entry.mjs
+Restart=on-failure
+RestartSec=3
+UMask=0027
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/srv/ramda/frontend/.astro /srv/ramda/var
+MemoryMax=180M
+[Install]
+WantedBy=multi-user.target

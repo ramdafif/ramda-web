@@ -1,0 +1,3 @@
+# Install for the ramda service user with crontab -e; UTC server time.
+17 19 * * * /srv/ramda/deploy/backup.sh >> /srv/ramda/var/backup.log 2>&1
+27 19 * * * cd /srv/ramda/backend && .venv/bin/flask --app wsgi.py prune-metadata >> /srv/ramda/var/maintenance.log 2>&1

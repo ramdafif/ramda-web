@@ -1,0 +1,19 @@
+---
+import { text, type RecordData } from '../lib/cms';
+import { ui } from '../i18n/ui';
+import Icon from './Icon.astro';
+import Media from './Media.astro';
+interface Props { project: RecordData; index?: number; }
+const { project: p, index = 0 } = Astro.props;
+---
+<article class="project-card">
+  <a class="project-visual" href={`/projects/${p.slug}`} aria-label={`${ui.caseStudy}: ${text(p.title)}`} data-tone={index % 4}>
+    {p.cover?.src ? <Media image={p.cover}/> : <div class="project-letter" aria-hidden="true"><span>{text(p.title).slice(0, 1)}</span><div class="orbital orbital-one"></div><div class="orbital orbital-two"></div></div>}
+    <span class="project-visual-label">{text(p.title)}</span><span class="round-arrow"><Icon/></span>
+  </a>
+  <div class="project-body"><div class="project-meta"><span class:list={['status', p.status]}><i></i>{ui.statuses[p.status]}</span>{p.since && <span>{p.since}</span>}</div>
+    <h3><a href={`/projects/${p.slug}`}>{text(p.title)}</a></h3><p>{text(p.summary)}</p>
+    {text(p.result) && <p class="project-result">{text(p.result)}</p>}
+    <div class="tags">{p.stack_tags?.map((tag: string) => <span>{tag}</span>)}</div>
+  </div>
+</article>

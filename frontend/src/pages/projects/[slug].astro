@@ -1,0 +1,18 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Icon from '../../components/Icon.astro';
+import Media from '../../components/Media.astro';
+import { cms, text, type Home, type RecordData } from '../../lib/cms';
+import { breadcrumbs, creativeWork, identity } from '../../lib/seo';
+import { ui } from '../../i18n/ui';
+const preview = Astro.url.searchParams.get('preview') || '';
+const home = await cms<Home>('home', preview);
+let project: RecordData | undefined;
+try { project = await cms<RecordData>(`projects/${encodeURIComponent(Astro.params.slug || '')}`, preview); }
+catch(error) { Astro.response.status = error instanceof Error && error.message==='CMS 404' ? 404 : 503; }
+const origin = process.env.SITE_URL || Astro.url.origin;
+const schemas = project ? [...identity(home,origin), creativeWork(project,origin), breadcrumbs([{name:ui.home,path:'/'},{name:ui.projects,path:'/projects'},{name:text(project.title),path:`/projects/${project.slug}`}],origin)] : [];
+---
+<Layout home={home} title={project ? text(project.title) : ui.notFoundTitle} description={project ? text(project.summary) : ui.notFound} image={project?.cover?.src} jsonld={schemas} preview={!!preview}>
+{project ? <><div class="container page-intro"><nav class="breadcrumbs" aria-label={ui.menu}><a href="/">{ui.home}</a><span>/</span><a href="/projects">{ui.projects}</a><span>/</span><span>{text(project.title)}</span></nav><span class:list={['status',project.status]}><i></i>{ui.statuses[project.status]}</span><h1>{text(project.title)}</h1><p>{text(project.summary)}</p></div><div class="container page-content"><Media class="detail-cover" image={project.cover} eager/><div class="case-grid"><div>{(['problem','solution','result'] as const).map(key=>text(project![key]) && <section class="case-block"><h2>{ui[key]}</h2><div class="prose" set:html={project![`${key}_html`]?.id}/></section>)}</div><aside class="case-sidebar"><h2>{ui.stack}</h2><div class="tags">{project.stack_tags?.map((tag:string)=><span>{tag}</span>)}</div>{project.since && <p>{project.since}</p>}{project.metrics?.map((metric:{label:string;value:string})=><div class="case-metric"><strong>{metric.value}</strong><span>{metric.label}</span></div>)}{project.live_url&&<a href={project.live_url} class="button" target="_blank" rel="noopener noreferrer" data-track="project-demo">{ui.demo}<Icon size={16}/></a>}{project.repo_url&&<a href={project.repo_url} class="button ghost" target="_blank" rel="noopener noreferrer">{ui.repository}<Icon size={16}/></a>}</aside></div>{project.gallery?.length>0&&<div class="gallery">{project.gallery.map((image:any)=><Media image={image}/>)}</div>}</div></> : <section class="container not-found"><h1>{ui.notFoundTitle}</h1><p>{ui.notFound}</p><a class="button" href="/">{ui.back}</a></section>}
+</Layout>

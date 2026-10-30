@@ -1,0 +1,19 @@
+---
+import { text, whatsapp, type Home, type Localized } from '../lib/cms';
+import { ui } from '../i18n/ui';
+import Icon from './Icon.astro';
+interface Props { home: Home; }
+const { home: h } = Astro.props;
+const settings = h.settings;
+---
+<section id="contact" class="contact-section" aria-labelledby="contact-heading"><div class="container contact-grid"><div><p class="eyebrow">{text(settings.tagline)}</p><h2 id="contact-heading">{text(settings.contact_title)}</h2><p>{text(settings.contact_description)}</p>{whatsapp(settings) && <a class="contact-whatsapp" href={whatsapp(settings)} data-track="contact-whatsapp">{ui.whatsapp}<Icon size={16}/></a>}{settings.contact_email && <a class="contact-whatsapp" href={`mailto:${settings.contact_email}`}><Icon name="mail" size={16}/>{settings.contact_email}</a>}</div>
+<form method="post" action="/api/public/contact" class="contact-form" data-contact data-sitekey={h.turnstile_site_key} data-success={text(settings.contact_success)}>
+  <div class="field"><label for="contact-name">{ui.name}</label><input id="contact-name" name="name" autocomplete="name" required minlength="2" maxlength="100"/></div>
+  <div class="field"><label for="contact-contact">{ui.contact}</label><input id="contact-contact" name="contact" autocomplete="email" required minlength="5" maxlength="254"/></div>
+  <div class="field"><label for="contact-type">{ui.projectType}</label><select id="contact-type" name="project_type" required><option value="">{ui.choose}</option>{settings.project_types?.map((t: Localized)=><option value={text(t)}>{text(t)}</option>)}</select></div>
+  <div class="field"><label for="contact-budget">{ui.budget}</label><select id="contact-budget" name="budget_range" required><option value="">{ui.choose}</option>{settings.budget_ranges?.map((t: Localized)=><option value={text(t)}>{text(t)}</option>)}</select></div>
+  <div class="field field-wide"><label for="contact-message">{ui.message}</label><textarea id="contact-message" name="message" rows="4" required minlength="10" maxlength="4000"></textarea></div>
+  <div class="honey" aria-hidden="true"><label for="contact-website">{ui.website}</label><input id="contact-website" name="website" tabindex="-1" autocomplete="off"/></div>
+  <div class="field-wide" data-contact-turnstile></div><div class="field-wide"><button type="submit" class="button">{ui.submit}<Icon size={16}/></button><p class="form-status" aria-live="polite" role="status"></p></div>
+</form></div></section>
+<script>import '../scripts/contact';</script>

@@ -1,0 +1,13 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+import { cms, text, type Home, type RecordData } from '../../lib/cms';
+import { breadcrumbs } from '../../lib/seo';
+import { ui } from '../../i18n/ui';
+const preview = Astro.url.searchParams.get('preview') || '';
+const home = await cms<Home>('home', preview);
+const projects = await cms<{items: RecordData[]}>('projects', preview);
+const section = home.sections.find(s=>s.key==='projects');
+const origin = process.env.SITE_URL || Astro.url.origin;
+---
+<Layout home={home} title={ui.projects} preview={!!preview} jsonld={[breadcrumbs([{name:ui.home,path:'/'},{name:ui.projects,path:'/projects'}],origin)]}><div class="container page-intro"><nav class="breadcrumbs" aria-label={ui.menu}><a href="/">{ui.home}</a><span>/</span><span>{ui.projects}</span></nav><p class="eyebrow">{text(section?.eyebrow)}</p><h1>{text(section?.title) || ui.projects}</h1>{text(section?.subtitle)&&<p>{text(section?.subtitle)}</p>}</div><div class="container page-content">{projects.items.length ? <div class="projects-grid">{projects.items.map((p,i)=><ProjectCard project={p} index={i}/>)}</div> : <p>{ui.empty}</p>}</div></Layout>

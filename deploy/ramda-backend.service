@@ -1,0 +1,21 @@
+[Unit]
+Description=RAMDA Flask CMS and API
+After=network.target
+[Service]
+User=ramda
+Group=www-data
+WorkingDirectory=/srv/ramda/backend
+EnvironmentFile=/srv/ramda/.env
+Environment=NO_PROXY=localhost,127.0.0.1
+ExecStart=/srv/ramda/backend/.venv/bin/gunicorn --bind 127.0.0.1:8000 --workers 1 --threads 4 --timeout 75 --no-control-socket --access-logfile - --error-logfile - wsgi:app
+Restart=on-failure
+RestartSec=3
+UMask=0027
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/srv/ramda/backend/instance /srv/ramda/var
+MemoryMax=230M
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,15 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Media from '../../components/Media.astro';
+import { cms, text, type Home, type RecordData } from '../../lib/cms';
+import { breadcrumbs, identity } from '../../lib/seo';
+import { ui } from '../../i18n/ui';
+const preview = Astro.url.searchParams.get('preview') || '';
+const home = await cms<Home>('home',preview);
+let article: RecordData | undefined;
+try { article = await cms<RecordData>(`articles/${encodeURIComponent(Astro.params.slug || '')}`,preview); }
+catch(error) { Astro.response.status = error instanceof Error && error.message==='CMS 404' ? 404 : 503; }
+const origin = process.env.SITE_URL || Astro.url.origin;
+const schemas = article ? [...identity(home,origin), {'@context':'https://schema.org','@type':'Article',headline:text(article.title),description:text(article.excerpt),datePublished:article.published_at,author:{'@type':'Person',name:home.about.name,url:origin},mainEntityOfPage:`${origin}/articles/${article.slug}`,...(article.cover?.src?{image:new URL(article.cover.src,origin).href}:{})},breadcrumbs([{name:ui.home,path:'/'},{name:ui.articles,path:'/articles'},{name:text(article.title),path:`/articles/${article.slug}`}],origin)] : [];
+---
+<Layout home={home} ogType="article" title={article ? text(article.seo_title)||text(article.title) : ui.notFoundTitle} description={article ? text(article.seo_description)||text(article.excerpt) : ui.notFound} image={article?.og_image?.src||article?.cover?.src} jsonld={schemas} preview={!!preview}>{article ? <article><div class="container page-intro"><nav class="breadcrumbs" aria-label={ui.menu}><a href="/">{ui.home}</a><span>/</span><a href="/articles">{ui.articles}</a></nav><p class="eyebrow">{text(article.category)}</p><h1>{text(article.title)}</h1><p>{text(article.excerpt)}</p><p><time datetime={article.published_at}>{new Date(article.published_at).toLocaleDateString('id-ID',{year:'numeric',month:'long',day:'numeric',timeZone:'Asia/Jakarta'})}</time> · {article.reading_time} {ui.min}</p></div><div class="container page-content"><Media class="detail-cover" image={article.cover} eager/><div class="prose article-prose" set:html={article.body_html?.id}/></div></article> : <section class="container not-found"><h1>{ui.notFoundTitle}</h1><p>{ui.notFound}</p><a class="button" href="/">{ui.back}</a></section>}</Layout>
